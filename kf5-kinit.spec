@@ -1,15 +1,15 @@
-%define		kdeframever	5.39
+%define		kdeframever	5.43
 %define		qtver		5.3.2
 %define		kfname		kinit
 
 Summary:	Helper library to speed up start of applications on KDE workspaces
 Name:		kf5-%{kfname}
-Version:	5.39.0
+Version:	5.43.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	99d1b9b3f7c5301e3c33e62b289cdae3
+# Source0-md5:	48f5100e0a11f24e9321fd2359408b1e
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	gettext-devel
@@ -81,9 +81,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kdeinit5_wrapper
 %attr(755,root,root) %{_bindir}/kshell5
 %attr(755,root,root) %{_bindir}/kwrapper5
-%attr(755,root,root) %{_libdir}/kf5/klauncher
-%attr(755,root,root) %{_libdir}/kf5/start_kdeinit
-%attr(755,root,root) %{_libdir}/kf5/start_kdeinit_wrapper
+%attr(755,root,root) %{_libexecdir}/kf5/klauncher
+%attr(755,root,root) %{_libexecdir}/kf5/start_kdeinit
+%attr(755,root,root) %{_libexecdir}/kf5/start_kdeinit_wrapper
 %attr(755,root,root) %{_libdir}/libkdeinit5_klauncher.so
 %{_datadir}/dbus-1/interfaces/kf5_org.kde.KLauncher.xml
 %{_mandir}/man8/kdeinit5.8*
