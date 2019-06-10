@@ -1,15 +1,15 @@
-%define		kdeframever	5.56
+%define		kdeframever	5.59
 %define		qtver		5.9.0
 %define		kfname		kinit
 
 Summary:	Helper library to speed up start of applications on KDE workspaces
 Name:		kf5-%{kfname}
-Version:	5.56.0
+Version:	5.59.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	45b405b1a0305c903355ca42c744e1ae
+# Source0-md5:	d101bb3631112800c43dfe83019e0e86
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	gettext-devel
@@ -87,6 +87,15 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkdeinit5_klauncher.so
 %{_datadir}/dbus-1/interfaces/kf5_org.kde.KLauncher.xml
 %{_mandir}/man8/kdeinit5.8*
+%lang(ca) %{_mandir}/ca/man8/kdeinit5.8*
+%lang(de) %{_mandir}/de/man8/kdeinit5.8*
+%lang(es) %{_mandir}/es/man8/kdeinit5.8*
+%lang(it) %{_mandir}/it/man8/kdeinit5.8*
+%lang(nl) %{_mandir}/nl/man8/kdeinit5.8*
+%lang(pt) %{_mandir}/pt/man8/kdeinit5.8*
+%lang(pt_BR) %{_mandir}/pt_BR/man8/kdeinit5.8*
+%lang(sv) %{_mandir}/sv/man8/kdeinit5.8*
+%lang(uk) %{_mandir}/uk/man8/kdeinit5.8*
 
 %files devel
 %defattr(644,root,root,755)
