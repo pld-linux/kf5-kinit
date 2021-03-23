@@ -1,5 +1,5 @@
 %define		kdeframever	5.80
-%define		qtver		5.9.0
+%define		qtver		5.14.0
 %define		kfname		kinit
 
 Summary:	Helper library to speed up start of applications on KDE workspaces
@@ -11,17 +11,37 @@ Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
 # Source0-md5:	42d9d85b0dce1d068e290c191627ee81
 URL:		http://www.kde.org/
-BuildRequires:	cmake >= 2.8.12
-BuildRequires:	gettext-devel
+BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5DBus-devel >= %{qtver}
+BuildRequires:	Qt5Gui-devel >= %{qtver}
+BuildRequires:	cmake >= 3.5
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
+BuildRequires:	kf5-kconfig-devel >= %{version}
+BuildRequires:	kf5-kcrash-devel >= %{version}
+BuildRequires:	kf5-kdbusaddons-devel >= %{version}
+BuildRequires:	kf5-kdoctools-devel >= %{version}
+BuildRequires:	kf5-ki18n-devel >= %{version}
 BuildRequires:	kf5-kio-devel >= %{version}
+BuildRequires:	kf5-kservice-devel >= %{version}
+BuildRequires:	kf5-kwindowsystem-devel >= %{version}
 BuildRequires:	libcap-devel
+BuildRequires:	libxcb-devel
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xz
+Requires:	Qt5Core >= %{qtver}
+Requires:	Qt5DBus >= %{qtver}
+Requires:	Qt5Gui >= %{qtver}
 Requires:	kf5-dirs
+Requires:	kf5-kconfig >= %{version}
+Requires:	kf5-kcrash >= %{version}
+Requires:	kf5-kdbusaddons >= %{version}
+Requires:	kf5-ki18n >= %{version}
+Requires:	kf5-kio >= %{version}
+Requires:	kf5-kservice >= %{version}
+Requires:	kf5-kwindowsystem >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
