@@ -1,15 +1,15 @@
-%define		kdeframever	5.90
+%define		kdeframever	5.91
 %define		qtver		5.14.0
 %define		kfname		kinit
 
 Summary:	Helper library to speed up start of applications on KDE workspaces
 Name:		kf5-%{kfname}
-Version:	5.90.0
+Version:	5.91.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	97d6c77a3bf023178e7db8b8a3d92e36
+# Source0-md5:	aa0a82faf3749e707565bc0172ced5d3
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
