@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.96
+%define		kdeframever	5.97
 %define		qtver		5.15.2
 %define		kfname		kinit
 
 Summary:	Helper library to speed up start of applications on KDE workspaces
 Name:		kf5-%{kfname}
-Version:	5.96.0
+Version:	5.97.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	4dc959ec796c29ea7b7b8999e02ca36f
+# Source0-md5:	bd9eb91ce374b4156f1f00dcd69dbb2f
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
